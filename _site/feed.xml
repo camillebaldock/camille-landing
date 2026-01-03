@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-01-02T22:23:59-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Technically feasible</title><subtitle>Hand-drawn and written snapshots on the messy systems beneath tech and healthcare.</subtitle><entry><title type="html">One year later: what I read to understand healthcare policy in 2025</title><link href="http://localhost:4000/one-year-later-reading-in-healthcare-tech-policy/" rel="alternate" type="text/html" title="One year later: what I read to understand healthcare policy in 2025" /><published>2025-12-20T00:00:00-05:00</published><updated>2025-12-20T00:00:00-05:00</updated><id>http://localhost:4000/one-year-later-reading-in-healthcare-tech-policy</id><content type="html" xml:base="http://localhost:4000/one-year-later-reading-in-healthcare-tech-policy/"><![CDATA[<p>Another year in healthcare data and tech, and I got through another stack of reading and listening that deepened my understanding.</p>
+
+<h2 id="books-and-long-reads">Books and long reads</h2>
+
+<ul>
+  <li><strong>“The Hospital: Life, Death, and Dollars in a Small American Town” (Brian Alexander):</strong> How incentives and policy collide in real hospitals.</li>
+  <li><strong>“The Code” (Margaret O’Mara):</strong> How tech power and policy intertwine; helpful for understanding health tech policy dynamics.</li>
+  <li><strong>“Health Justice Now” (Tim Faust):</strong> Coverage, equity, and the limits of tech without policy change.</li>
+  <li><strong>Commonwealth Fund and RAND on price regulation/reference pricing:</strong> Data-driven looks at price controls in practice.</li>
+  <li><strong>Brookings papers on site-neutral payments and consolidation:</strong> How payment policy shapes market power.</li>
+</ul>
+
+<h2 id="people-and-voices">People and voices</h2>
+
+<ul>
+  <li><strong>Yubin Park:</strong> Data science and policy at the payer/provider intersection.</li>
+</ul>
+
+<h2 id="podcasts-and-shows">Podcasts and shows</h2>
+
+<ul>
+  <li><strong>Health Affairs This Week:</strong> Quick policy updates with source links.</li>
+  <li><strong>The Health Care Policy Podcast (David Introcaso):</strong> Policy interviews beyond headlines.</li>
+</ul>
+
+<h2 id="newsletters-and-blogs">Newsletters and blogs</h2>
+
+<ul>
+  <li><strong>Health Tech Nerds (HTN):</strong> Operator-focused takes and Slack community on health tech and policy.</li>
+</ul>
+
+<h2 id="primary-sources-and-data">Primary sources and data</h2>
+
+<ul>
+  <li><strong>Price Transparency MRFs and payer files:</strong> Still messy; reading them keeps the BS detector on.</li>
+  <li><strong>CMMI model evaluations:</strong> What actually worked in pilots versus press releases.</li>
+</ul>]]></content><author><name>Dr. [Your Last Name]</name></author><summary type="html"><![CDATA[New books, voices, and sources that shaped how I think about healthcare data, policy, and incentives.]]></summary></entry><entry><title type="html">Your 3 am problem was engineered six months ago</title><link href="http://localhost:4000/your-3-am-problem-started-six-months-ago/" rel="alternate" type="text/html" title="Your 3 am problem was engineered six months ago" /><published>2025-04-15T00:00:00-04:00</published><updated>2025-04-15T00:00:00-04:00</updated><id>http://localhost:4000/your-3-am-problem-started-six-months-ago</id><content type="html" xml:base="http://localhost:4000/your-3-am-problem-started-six-months-ago/"><![CDATA[<p>I used to think the worst part of a 3 am page was the alarm. I was wrong. The worst part is trying to rebuild a mental map of a complex system while half-awake. When a system fails at scale, you are almost never fighting a new bug. You are fighting a decision someone made months ago.</p>
+
+<p>Some years ago, a data misconfiguration took down our primary service. The fix was straightforward: a single configuration change. But at 3 am, with customers locked out and the incident channel filling with messages, the technical fix was the easy part. The hard part was managing the room.</p>
+
+<p>I am on a rotation of incident commanders and have held similar roles across companies. Not every organization trains people to run the room when things break. Responders join a crisis call with adrenaline and a deep need to be useful. My job is not to solve the problem faster; it is to stop ten smart people from solving it ten different ways. Breathe. Open the runbook. Focus on containment, not root cause. We will discuss what went wrong when everyone has slept.</p>
+
+<p>No one wants to hear this. Everyone wants to be the person who spotted the real issue, who pushed the clever fix, who saved the day. But any line of code written under 3 am pressure is guaranteed to introduce a new, fascinating bug that we will discover next week. Our job is to stick to the pre-approved list of actions wherever possible, no matter how boring that feels.</p>
+
+<p>The other thing I am managing, the thing I cannot say out loud on the incident call: I know exactly why this happened. Six months ago, we chose the quick implementation over the robust one. We knew the trade-offs. We told ourselves we would come back and fix it properly later. This incident is just the bill coming due, with compound interest and a wake-up call.</p>
+
+<p>Once the system stabilizes, everyone wants to move on. The fire is out, let’s go ship features. This is where most organizations fail. The pressure to return to normal is immense. Product wants their roadmap back. Leadership wants to announce the all-clear. The people who just spent four hours on a bridge call want to sleep and forget this ever happened.</p>
+
+<p>But the incident itself is just expensive theater until the real work starts in the retrospective, when we are rested and no longer running on adrenaline. We document not just what broke, but what we knew might break and built anyway. We update the runbooks with the specific things we learned at 3 am that we never want to learn again. We turn the late-night panic into next quarter’s process.</p>
+
+<p>This is unglamorous work. No one gets promoted for writing better runbooks. But the alternative is predictable: six months from now, someone else gets paged at 3 am to fight the same fire, because we were too busy shipping features to pay down the debt.</p>
+
+<h2 id="quantify-the-bill-then-fund-the-fix">Quantify the bill, then fund the fix</h2>
+
+<p>If you are leading a high-stakes environment, the goal is to make operational risk visible and quantifiable for the entire organization. Here are two actions that have worked for me:</p>
+
+<p><strong>Quantify the systemic cost of failure, then fund the fix.</strong> After our data misconfiguration incident, we calculated the real cost: 47 engineering hours across the incident and follow-up work, estimated customer impact from the four-hour outage, and roughly 15 percent of our weekly support ticket volume for the following month dealing with fallout. We used that total, a number large enough to make leadership uncomfortable, to justify dedicating two engineers for several sprints to fix the configuration system properly. For your next post-incident review, dedicate time to calculate the full cost of the outage: engineering hours spent, lost opportunity cost, and the estimated loss of customer trust. Use that number to justify allocating a percentage of your next feature budget to improve the failure modes of the service that broke. This transforms maintenance or KTLO into a risk mitigation investment.</p>
+
+<p><strong>Systematize the hard reset conversation.</strong> Identify one legacy dependency or architectural choice that is demonstrably adding friction to development or reliability. Begin a formal, business-aligned process to sunset it. This requires quantifying the capacity gain you will realize when that friction is gone. The highest return comes from removing the single biggest piece of architecture that makes everything else harder, freeing up capacity across the organization.</p>
+
+<p>Mature organizations are not defined by uptime; they are defined by the week after an incident and whether the next engineer paged at 3 am finds a runbook that actually helps.</p>]]></content><author><name>Dr. [Your Last Name]</name></author><summary type="html"><![CDATA[Incidents are bills coming due; contain first, then fund the fixes before the next pager.]]></summary></entry><entry><title type="html">So your sales team just sold something you can’t build</title><link href="http://localhost:4000/your-sales-team-just-sold-something-you-cant-build/" rel="alternate" type="text/html" title="So your sales team just sold something you can’t build" /><published>2025-02-05T00:00:00-05:00</published><updated>2025-02-05T00:00:00-05:00</updated><id>http://localhost:4000/your-sales-team-just-sold-something-you-cant-build</id><content type="html" xml:base="http://localhost:4000/your-sales-team-just-sold-something-you-cant-build/"><![CDATA[<p>It usually starts with a Slack message: “Quick sync! New customer signed! They need real-time eligibility verification by next month. Congrats everyone!”</p>
+
+<p>Your stomach drops because you know “real-time” does not exist in your current architecture. You have a flaky overnight batch process, poorly documented by a three-year old confluence page someone who has now left the company created as a draft. You told them it would take six months to build the real thing. They sold it anyway. I have been in this situation at least six times that I can think of across three companies. I got it wrong four out of those six times: burned out teams, shipped brittle systems, or still missed the promise.</p>
+
+<p>Here are a few thoughts on what I have learnt.</p>
+
+<h2 id="get-the-facts-in-writing">Get the facts in writing</h2>
+
+<p>Before any technical planning, establish exactly what was promised: contract or SOW, proposal or RFP response, demo recordings, email trail. In healthcare in particular, “real-time” can mean “24 hours,” “15 minutes,” or “sub-second” depending on who you talk to. Figure out what you are actually on the hook for.</p>
+
+<h2 id="be-honest-with-yourself">Be honest with yourself</h2>
+
+<p>Can you deliver what was promised?</p>
+
+<ol>
+  <li>Yes, fully (rare; just do it).</li>
+  <li>Yes, but with unacceptable technical debt (you will pay for years).</li>
+  <li>Partially, with clear tradeoffs (valuable, but not everything).</li>
+  <li>No, not in the timeframe (possible, but not in weeks).</li>
+  <li>No, not with current architecture (needs foundations you do not have).</li>
+  <li>No, not ever (violates physics, regulation, or dependencies you do not control).</li>
+</ol>
+
+<p>The biggest danger is pretending #5 is #3. I did that twice. We burned months, burned people, and still missed the commitment or lost credibility.</p>
+
+<h2 id="offer-options-not-ultimatums">Offer options, not ultimatums</h2>
+
+<p>Walking in with “we cannot build what you sold” makes you the blocker. Instead, develop 3-4 options with clear tradeoffs:</p>
+
+<ul>
+  <li><strong>Option A:</strong> Deliver exactly what was promised. Timeline: 6 months. Cost: 4 engineers full-time; delays roadmap by 2 quarters. Customer impact: everything promised, delayed launch.</li>
+  <li><strong>Option B:</strong> Deliver 80% in the promised timeframe. Timeline: 2 months. Tradeoff: batch processing (4 hours, not 2 seconds), manual edge-case review. Customer impact: core use case works; some workflows need adjustment.</li>
+  <li><strong>Option C:</strong> MVP now, full later. Timeline: Phase 1 in 2 months; Phase 2 in 4 more. Tradeoff: customer adopts in stages. Customer impact: quick start, full capabilities later.</li>
+  <li><strong>Option D:</strong> Renegotiate. Go back to the customer with an honest assessment and revise the contract. Risk: customer might walk. Impact: honest conversation about what is possible.</li>
+</ul>
+
+<p>Frame it as: “Here is what was promised. Here is what is possible. Here are our options. What matters most: timeline, completeness, or quality?”</p>
+
+<h2 id="bring-data-to-the-conversation">Bring data to the conversation</h2>
+
+<p>The people who need to be there are the person who made the commitment, engineering leadership with authority to commit resources, product leadership for roadmap tradeoffs, and customer success to manage the relationship. Do not do this in Slack or email. Bring the commitment docs, your technical assessment, the options with tradeoffs, and your recommendation.</p>
+
+<h2 id="negotiate-within-reality">Negotiate within reality</h2>
+
+<p>Things you can negotiate: timeline, feature completeness, resource allocation, scope of MVP. Things you cannot negotiate: technical feasibility, safety or compliance, team health (no 80-hour weeks for months), debt that will cripple you later.</p>
+
+<p>You will likely be under pressure from your leadership, but stick to what is possible: “If we promise something impossible and fail, we lose the customer anyway and we burn out the team. Let me show you what we can deliver.”</p>
+
+<h2 id="fix-the-process-so-it-stops-happening">Fix the process so it stops happening</h2>
+
+<p>Once you navigate the immediate crisis, fix the system:</p>
+
+<ol>
+  <li><strong>Technical review before contracts:</strong> Engineering reviews commitments before they go into contracts, with authority to flag risks.</li>
+  <li><strong>Sales training on boundaries:</strong> Practical training on what the product can and cannot do; when to involve engineering.</li>
+  <li><strong>Standard contract language:</strong> Define “real-time,” include phased delivery schedules and success criteria, and a change-control process.</li>
+  <li><strong>Blameless retrospective:</strong> How did this get sold without technical input? What incentives drove it? Document and propose process changes.</li>
+</ol>
+
+<p>Overselling stops when the incentives and the process change. Until then, lead with facts, options, and a refusal to pretend the impossible is feasible on a whim.</p>]]></content><author><name>Dr. [Your Last Name]</name></author><summary type="html"><![CDATA[When a deal promises the impossible, replace anger or heroics with facts, options, and governance.]]></summary></entry><entry><title type="html">A year of learning about the healthcare industry</title><link href="http://localhost:4000/my-healthcare-data-journey-learning-rcm-and-value-based-care/" rel="alternate" type="text/html" title="A year of learning about the healthcare industry" /><published>2025-01-15T00:00:00-05:00</published><updated>2025-01-15T00:00:00-05:00</updated><id>http://localhost:4000/my-healthcare-data-journey-learning-rcm-and-value-based-care</id><content type="html" xml:base="http://localhost:4000/my-healthcare-data-journey-learning-rcm-and-value-based-care/"><![CDATA[<p>Since deciding to work in health tech, I’ve wanted to deepen my understanding of the American healthcare system, especially revenue cycle management, interoperability, and care delivery. Here are some of the resources I’ve been using.</p>
+
+<p>Three books that continue to inspire me:</p>
+
+<ul>
+  <li><strong>Elisabeth Rosenthal’s “An American Sickness”:</strong> Many “best practices” in billing are strategies to maximize revenue in a broken market. Always ask who benefits from complexity.</li>
+  <li><strong>Michael Marmot’s “The Health Gap”:</strong> Health follows social gradients. Technology is useless if it only helps people who already have the most resources.</li>
+  <li><strong>Marty Makary’s “Unaccountable”:</strong> Outcome transparency is rare and necessary. Data transparency is the only real accountability.</li>
+</ul>
+
+<p>More books that shaped my thinking:</p>
+
+<ul>
+  <li><strong>“Understanding Value-Based Healthcare” by Moriates, Arora, and Shah:</strong> Clear on cost measurement and the shift from volume to value.</li>
+  <li><strong>“The Innovator’s Prescription” by Christensen:</strong> Business model patterns; helps spot where disruption will fail.</li>
+</ul>
+
+<p>People and voices I follow on LinkedIn for signal:</p>
+
+<ul>
+  <li><strong>Farzad Mostashari (Aledade):</strong> Practical VBC and primary care insights.</li>
+  <li><strong>Lisa Suennen (Venture Valkyrie):</strong> Sharp takes on health tech business models.</li>
+  <li><strong>Nikhil Krishnan (Out-of-Pocket):</strong> Plain-language and often hilarious breakdowns of payer and provider mechanics.</li>
+  <li><strong>Chrissy Farr (health tech investor):</strong> Market moves and incentives.</li>
+  <li><strong>Aneesh Chopra:</strong> Interop, policy, and TEFCA progress.</li>
+</ul>
+
+<p>Podcasts and shows I have found worth my time:</p>
+
+<ul>
+  <li><strong>Relentless Health Value:</strong> Straight talk on pharmacy, benefits, and payment incentives.</li>
+  <li><strong>AHealthcareZ (YouTube):</strong> Deep dives on payer/provider mechanics and benefits with plain explanations. A lot of content, but extremely useful as a library to look up a specific acronym or concept explained.</li>
+  <li><strong>Tradeoffs:</strong> Policy tradeoffs, clear explanations.</li>
+  <li><strong>An Arm and a Leg:</strong> Patient billing realities.</li>
+</ul>
+
+<p>Newsletters and blogs that keep me honest:</p>
+
+<ul>
+  <li><strong>Out-of-Pocket:</strong> Humor plus clear operator-level analysis.</li>
+  <li><strong>The Incidental Economist:</strong> Evidence-based health policy.</li>
+  <li><strong>Health Affairs:</strong> Deep dives on policy and payment reform.</li>
+  <li><strong>KFF:</strong> Coverage, premiums, and affordability data.</li>
+</ul>
+
+<p>Courses and primary sources:</p>
+
+<ul>
+  <li><strong>CMS data portals:</strong> Care Compare, PUFs, MA rate announcements; they force you to confront how messy the data is.</li>
+  <li><strong>CMS Final Rules and Fact Sheets:</strong> IPPS, OPPS, Physician Fee Schedule; painful to read, but they set the economics.</li>
+  <li><strong>Udemy – Healthcare EDI X12 837 and 835 Beginners Training:</strong> Practical walk-through of claim and remittance formats with sample files: https://www.udemy.com/course/healthcare-edi-x12-837-835-beginners-training/</li>
+  <li><strong>Coursera/UPenn – Healthcare Analytics Essentials:</strong> Intro to claims-driven analysis and measurement: https://www.coursera.org/learn/healthcare-analytics</li>
+</ul>]]></content><author><name>Dr. [Your Last Name]</name></author><summary type="html"><![CDATA[RCM, VBC, and the resources that changed how I think about healthcare data.]]></summary></entry><entry><title type="html">Obsessive infrastructure and the Disney trash can lesson</title><link href="http://localhost:4000/obsessive-infrastructure-and-the-disney-trash-can-lesson/" rel="alternate" type="text/html" title="Obsessive infrastructure and the Disney trash can lesson" /><published>2024-07-01T00:00:00-04:00</published><updated>2024-07-01T00:00:00-04:00</updated><id>http://localhost:4000/obsessive-infrastructure-and-the-disney-trash-can-lesson</id><content type="html" xml:base="http://localhost:4000/obsessive-infrastructure-and-the-disney-trash-can-lesson/"><![CDATA[<p>At Disney World, trash cans are never more than 30 steps apart. Walk through Magic Kingdom and you will never see a garbage truck, never see an overflowing bin, never see a custodian struggling with bags. The trash just vanishes every few minutes.</p>
+
+<p>This is not magic. Under the park runs a network of pneumatic tubes that moves garbage at 60 mph to a central facility. Disney spent millions engineering waste removal that guests never notice, never think about, never applaud.</p>
+
+<p>While everyone photographs the castle, I’m thinking about those tubes.</p>
+
+<p>The most effective systems are invisible, boring, and relentless. In healthcare, that means:</p>
+<ul>
+  <li>Patient data that moves between systems without a human copying and pasting.</li>
+  <li>Eligibility checks that return in seconds instead of days.</li>
+  <li>Pricing that gives the same answer everywhere.</li>
+</ul>
+
+<p>No one celebrates infrastructure that works. Your CEO won’t demo the new message queue at the company all-hands. Patients don’t write thank-you notes about sub-second latency.</p>
+
+<p>But everyone notices when it fails. The integration layer goes down and suddenly staff are back to manual entry, except now they’re also fielding complaints about why the new system is “broken”. The eligibility check times out and the front desk tells patients “our systems are having issues” instead of “your insurance isn’t active”. The pricing database drifts and someone has to explain to an angry patient why they were quoted three different numbers.</p>
+
+<p>The work is invisible until it isn’t and to me that’s what makes it worth doing.</p>
+
+<p>The trash tubes at Disney cost more than most of the rides. They generate zero revenue. They don’t appear in any marketing materials. Guests don’t plan vacations around waste management (apart from me I guess?).</p>
+
+<p>But without them, Magic Kingdom smells like garbage by noon and the fantasy collapses.</p>
+
+<p>I keep coming back to this: build the infrastructure that makes everything else feel effortless. Make it invisible, reliable, and dull. That’s not settling for boring work; it’s choosing the kind of boring that lets everyone else do something interesting.</p>]]></content><author><name>Dr. [Your Last Name]</name></author><summary type="html"><![CDATA[Why invisible systems matter more than flashy features, and how that applies to healthcare and data.]]></summary></entry><entry><title type="html">Why I’m writing more (and how I’m learning to do it)</title><link href="http://localhost:4000/why-im-writing-more/" rel="alternate" type="text/html" title="Why I’m writing more (and how I’m learning to do it)" /><published>2024-04-20T00:00:00-04:00</published><updated>2024-04-20T00:00:00-04:00</updated><id>http://localhost:4000/why-im-writing-more</id><content type="html" xml:base="http://localhost:4000/why-im-writing-more/"><![CDATA[<p>I’ve spent years solving problems inside companies. In the AI era, where autogenerated text is cheap, clear thinking matters more than ever. Writing forces me to articulate what I actually believe.</p>
+
+<p>I picked up William Zinsser’s <em>On Writing Well</em> expecting craft tips. What I found instead was a mirror held up to all my lazy habits: jargon and acronyms, hedge words that dilute conviction, and the assumption that complexity signals expertise. Zinsser argues that clutter is the disease and clarity is the cure. Most of my internal docs have been terminally ill.</p>
+
+<p>I’m writing more, but I’m also learning how to write. Here are the rules I’m practicing:</p>
+
+<p>1) <strong>Write like I talk.</strong> If I wouldn’t say it over coffee, I don’t write it. “Utilize” becomes “use.” “Leverage” becomes “use.” Plain words force plain thinking.</p>
+
+<p>2) <strong>Strip the clutter.</strong> “We need to use a multi-tiered approach to optimize our data pipeline architecture” became “We should cache data at three points.” Shorter, clearer, easier to understand.</p>
+
+<p>3) <strong>Use the first person.</strong> Corporate “we” diffuses responsibility. “I believe” or “I chose” creates accountability and makes the writing feel human.</p>
+
+<p>4) <strong>Trust the reader.</strong> I cut apologetic preambles and over-explanation. Ambiguity isn’t always bad; sometimes a sharp edge is needed to move a decision forward.</p>
+
+<p>5) <strong>Rewrite.</strong> First drafts are for getting thoughts out; subsequent drafts make them readable. Prose isn’t code; it needs to breathe, be read aloud, and survive daylight.</p>
+
+<p>Writing is my clarity check. If I can’t explain a technical decision in plain English, I probably don’t understand it. I’m writing to keep myself honest and to make sure what I build is based on clear thinking, not just a mix of bad habits and AI slop.</p>]]></content><author><name>Dr. [Your Last Name]</name></author><summary type="html"><![CDATA[Writing as a clarity check in the AI era, and the craft rules I'm practicing.]]></summary></entry><entry><title type="html">Why I left big tech for health tech</title><link href="http://localhost:4000/why-i-left-big-tech-to-work-in-health-tech/" rel="alternate" type="text/html" title="Why I left big tech for health tech" /><published>2024-02-01T00:00:00-05:00</published><updated>2024-02-01T00:00:00-05:00</updated><id>http://localhost:4000/why-i-left-big-tech-to-work-in-health-tech</id><content type="html" xml:base="http://localhost:4000/why-i-left-big-tech-to-work-in-health-tech/"><![CDATA[<p>I didn’t plan to become obsessed with the American healthcare system. I was perfectly happy building scalable systems at big tech companies, solving fun distributed systems problems that make engineers geek out at conferences.</p>
+
+<p>Then my kid got sick.</p>
+
+<p>Not catastrophically, thank god. But bad enough that we needed multiple specialists and so overnight I became a parent trying to navigate the spectacular absurdity of the US healthcare system.</p>
+
+<p>I can’t point to one single thing that broke me, but slowly and surely it happened. It started out with the indignities of having to navigate what counts as ‘good’ software. I opened nine free trials for online fax services because that’s apparently how you authorize medical record transfers in 2024. I paid $47 to overnight a CD-ROM to myself, just to drive it to a specialist because systems “couldn’t talk to each other”. I had a prepared printout of my kid’s full medical history summary, customized per specialist, that I bought to every visit because it sure as hell was better than whatever their EHR could tell them.</p>
+
+<p>This was all happening in major hospital systems in Massachusetts and California, both claiming to use “modern” electronic health records. Both had spent millions on their IT infrastructure. I’ve built systems that process billions of events per day. I’ve designed data pipelines that sync across multiple continents in seconds. And here I was, opening my ninth free fax trial, functioning as physical middleware between two systems that were supposedly interoperable.</p>
+
+<p>Then there was the billing nightmare. Random amounts would arrive via email and paper mail, sometimes both for the same service. A $347 bill for a lab test. Then two weeks later, an adjusted bill for $223 for the same test. Then an explanation of benefits saying I owed $53. Then another bill for $223 again.</p>
+
+<p>Hours went to billing calls where the provider said “ask insurance” and insurance said “ask the provider.” No one had the whole picture. I had all the bills, all the EOBs, all the payment confirmations, and I still couldn’t reconcile them. We had “good” insurance through a tech company. This was the “good” experience.</p>
+
+<p>I think what really lit a fire within me is when I realized we were not some weird exception. I met other families in waiting rooms dealing with the same chaos, just with fewer resources to absorb it. Parents who’d taken time off work they couldn’t afford to take, navigating eligibility processes to government programs or charity care that seemed at best disorganized, at worst diabolical. Families trying to navigate the same fragmented care and billing nightmare while working jobs that didn’t give them the flexibility to spend hours on hold.</p>
+
+<p>My fury became real when I started studying more deeply what was going on and trying to follow the money. Finding high level information was very easy, but the more I dug, the murkier it got and the more mysterious things seemed. And I learned that where there is mystery, there is profit. Most of the money wasn’t going to actual care, but to the administrative labyrinth. The prior authorization process. The claims disputes. The coordination failures. The redundant tests because records didn’t transfer. The emergency room visits that could have been prevented if the primary care doctor had access to the specialist’s notes.</p>
+
+<p>Insurers profit from friction. EHR vendors profit from lock-in. PBMs profit from rebate opacity. Hospitals profit from volume, not outcomes. Everyone optimizes locally; patients get crushed globally. We spend roughly $12,500 per person on healthcare in this country that I am proud to call my home, double what peer nations spend. We are not paying for better medicine; we are paying for administrative friction.</p>
+
+<p>The US healthcare system isn’t broken because the technical problems are hard. It’s broken because the incentive structures are misaligned at every level, and the technology has been designed to reinforce those misalignments. Every technical decision is downstream of business models that benefit from friction. Patient portals instead of true interoperability. AI on top of garbage data that doesn’t match across systems.</p>
+
+<p>I’m working in health tech now because I can’t not work on this. I don’t have a master plan. I don’t have all the answers, but I am trying to educate myself and surround myself by people who care about those problems as well. I’m trying to meet people who see the same problems and refuse to accept that they’re unsolvable. Engineers who’ve built serious systems in other domains and can’t unsee the dysfunction. Clinical leaders who are tired of fighting broken tools. Policy people who understand that technology and incentives are inseparable. Patients and families who’ve lived this nightmare and know exactly what needs to change.</p>
+
+<p>Fixing this needs everyone. The incentives are entrenched, the problems are massive, but we have to start somewhere. We have built harder things. The question is whether we will build infrastructure that challenges the incentive structures instead of reinforcing them. If you’re working on this and want to connect, reach out. This is too big to solve alone, and too important not to try.</p>]]></content><author><name>Dr. [Your Last Name]</name></author><summary type="html"><![CDATA[From personal crisis to confronting the mess of US healthcare's incentives.]]></summary></entry></feed>

@@ -1,0 +1,26 @@
+---
+layout: page
+title: "Insights"
+permalink: /blog/
+---
+
+## Latest Articles
+
+<div class="posts-grid">
+  {% assign posts_list = site.posts %}
+  {% if posts_list.size > 0 %}
+    {% for post in posts_list %}
+      <article class="post-card">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.excerpt %}
+          <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        {% else %}
+          <p>{{ post.description | default: site.description }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  {% else %}
+    <p>No articles yet. Publish your first piece to showcase your perspective.</p>
+  {% endif %}
+</div>

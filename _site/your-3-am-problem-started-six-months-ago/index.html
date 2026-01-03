@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your 3 am problem was engineered six months ago</title>
+    <meta name="description" content="I used to think the worst part of a 3 am page was the alarm. I was wrong. The worst part is trying to rebuild a mental map of a complex system while half-awake. When a system fails at scale, you are almost never fighting a new bug. You are fighting a decision someone made months ago." />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="nav-wrap">
+    <div class="brand">
+      <a href="/">Technically feasible</a>
+      <span class="tagline">Snapshots of engineering, operations, and healthcare data in the real world.</span>
+    </div>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="/">Writing</a></li>
+        <li><a href="/about/">About Me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <main class="content" role="main">
+      <article class="post">
+  <header class="post-header">
+    <p class="post-date">
+      <time datetime="2025-04-15T00:00:00-04:00">April 15, 2025</time>
+    </p>
+    <h1>Your 3 am problem was engineered six months ago</h1>
+  </header>
+  <div class="post-content">
+    <p>I used to think the worst part of a 3 am page was the alarm. I was wrong. The worst part is trying to rebuild a mental map of a complex system while half-awake. When a system fails at scale, you are almost never fighting a new bug. You are fighting a decision someone made months ago.</p>
+
+<p>Some years ago, a data misconfiguration took down our primary service. The fix was straightforward: a single configuration change. But at 3 am, with customers locked out and the incident channel filling with messages, the technical fix was the easy part. The hard part was managing the room.</p>
+
+<p>I am on a rotation of incident commanders and have held similar roles across companies. Not every organization trains people to run the room when things break. Responders join a crisis call with adrenaline and a deep need to be useful. My job is not to solve the problem faster; it is to stop ten smart people from solving it ten different ways. Breathe. Open the runbook. Focus on containment, not root cause. We will discuss what went wrong when everyone has slept.</p>
+
+<p>No one wants to hear this. Everyone wants to be the person who spotted the real issue, who pushed the clever fix, who saved the day. But any line of code written under 3 am pressure is guaranteed to introduce a new, fascinating bug that we will discover next week. Our job is to stick to the pre-approved list of actions wherever possible, no matter how boring that feels.</p>
+
+<p>The other thing I am managing, the thing I cannot say out loud on the incident call: I know exactly why this happened. Six months ago, we chose the quick implementation over the robust one. We knew the trade-offs. We told ourselves we would come back and fix it properly later. This incident is just the bill coming due, with compound interest and a wake-up call.</p>
+
+<p>Once the system stabilizes, everyone wants to move on. The fire is out, let’s go ship features. This is where most organizations fail. The pressure to return to normal is immense. Product wants their roadmap back. Leadership wants to announce the all-clear. The people who just spent four hours on a bridge call want to sleep and forget this ever happened.</p>
+
+<p>But the incident itself is just expensive theater until the real work starts in the retrospective, when we are rested and no longer running on adrenaline. We document not just what broke, but what we knew might break and built anyway. We update the runbooks with the specific things we learned at 3 am that we never want to learn again. We turn the late-night panic into next quarter’s process.</p>
+
+<p>This is unglamorous work. No one gets promoted for writing better runbooks. But the alternative is predictable: six months from now, someone else gets paged at 3 am to fight the same fire, because we were too busy shipping features to pay down the debt.</p>
+
+<h2 id="quantify-the-bill-then-fund-the-fix">Quantify the bill, then fund the fix</h2>
+
+<p>If you are leading a high-stakes environment, the goal is to make operational risk visible and quantifiable for the entire organization. Here are two actions that have worked for me:</p>
+
+<p><strong>Quantify the systemic cost of failure, then fund the fix.</strong> After our data misconfiguration incident, we calculated the real cost: 47 engineering hours across the incident and follow-up work, estimated customer impact from the four-hour outage, and roughly 15 percent of our weekly support ticket volume for the following month dealing with fallout. We used that total, a number large enough to make leadership uncomfortable, to justify dedicating two engineers for several sprints to fix the configuration system properly. For your next post-incident review, dedicate time to calculate the full cost of the outage: engineering hours spent, lost opportunity cost, and the estimated loss of customer trust. Use that number to justify allocating a percentage of your next feature budget to improve the failure modes of the service that broke. This transforms maintenance or KTLO into a risk mitigation investment.</p>
+
+<p><strong>Systematize the hard reset conversation.</strong> Identify one legacy dependency or architectural choice that is demonstrably adding friction to development or reliability. Begin a formal, business-aligned process to sunset it. This requires quantifying the capacity gain you will realize when that friction is gone. The highest return comes from removing the single biggest piece of architecture that makes everything else harder, freeing up capacity across the organization.</p>
+
+<p>Mature organizations are not defined by uptime; they are defined by the week after an incident and whether the next engineer paged at 3 am finds a runbook that actually helps.</p>
+
+  </div>
+</article>
+
+    </main>
+    <footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-name">Camille Mackinnon</div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:camille@mackinnon.family" aria-label="Email">✉</a>
+      <a href="https://www.linkedin.com/in/camille-mackinnon-61405223/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+  <script data-goatcounter="https://technicallyfeasible.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</footer>
+
+  </body>
+</html>

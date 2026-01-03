@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>So your sales team just sold something you can't build</title>
+    <meta name="description" content="It usually starts with a Slack message: “Quick sync! New customer signed! They need real-time eligibility verification by next month. Congrats everyone!”" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="nav-wrap">
+    <div class="brand">
+      <a href="/">Technically feasible</a>
+      <span class="tagline">Snapshots of engineering, operations, and healthcare data in the real world.</span>
+    </div>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="/">Writing</a></li>
+        <li><a href="/about/">About Me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <main class="content" role="main">
+      <article class="post">
+  <header class="post-header">
+    <p class="post-date">
+      <time datetime="2025-02-05T00:00:00-05:00">February 5, 2025</time>
+    </p>
+    <h1>So your sales team just sold something you can't build</h1>
+  </header>
+  <div class="post-content">
+    <p>It usually starts with a Slack message: “Quick sync! New customer signed! They need real-time eligibility verification by next month. Congrats everyone!”</p>
+
+<p>Your stomach drops because you know “real-time” does not exist in your current architecture. You have a flaky overnight batch process, poorly documented by a three-year old confluence page someone who has now left the company created as a draft. You told them it would take six months to build the real thing. They sold it anyway. I have been in this situation at least six times that I can think of across three companies. I got it wrong four out of those six times: burned out teams, shipped brittle systems, or still missed the promise.</p>
+
+<p>Here are a few thoughts on what I have learnt.</p>
+
+<h2 id="get-the-facts-in-writing">Get the facts in writing</h2>
+
+<p>Before any technical planning, establish exactly what was promised: contract or SOW, proposal or RFP response, demo recordings, email trail. In healthcare in particular, “real-time” can mean “24 hours,” “15 minutes,” or “sub-second” depending on who you talk to. Figure out what you are actually on the hook for.</p>
+
+<h2 id="be-honest-with-yourself">Be honest with yourself</h2>
+
+<p>Can you deliver what was promised?</p>
+
+<ol>
+  <li>Yes, fully (rare; just do it).</li>
+  <li>Yes, but with unacceptable technical debt (you will pay for years).</li>
+  <li>Partially, with clear tradeoffs (valuable, but not everything).</li>
+  <li>No, not in the timeframe (possible, but not in weeks).</li>
+  <li>No, not with current architecture (needs foundations you do not have).</li>
+  <li>No, not ever (violates physics, regulation, or dependencies you do not control).</li>
+</ol>
+
+<p>The biggest danger is pretending #5 is #3. I did that twice. We burned months, burned people, and still missed the commitment or lost credibility.</p>
+
+<h2 id="offer-options-not-ultimatums">Offer options, not ultimatums</h2>
+
+<p>Walking in with “we cannot build what you sold” makes you the blocker. Instead, develop 3-4 options with clear tradeoffs:</p>
+
+<ul>
+  <li><strong>Option A:</strong> Deliver exactly what was promised. Timeline: 6 months. Cost: 4 engineers full-time; delays roadmap by 2 quarters. Customer impact: everything promised, delayed launch.</li>
+  <li><strong>Option B:</strong> Deliver 80% in the promised timeframe. Timeline: 2 months. Tradeoff: batch processing (4 hours, not 2 seconds), manual edge-case review. Customer impact: core use case works; some workflows need adjustment.</li>
+  <li><strong>Option C:</strong> MVP now, full later. Timeline: Phase 1 in 2 months; Phase 2 in 4 more. Tradeoff: customer adopts in stages. Customer impact: quick start, full capabilities later.</li>
+  <li><strong>Option D:</strong> Renegotiate. Go back to the customer with an honest assessment and revise the contract. Risk: customer might walk. Impact: honest conversation about what is possible.</li>
+</ul>
+
+<p>Frame it as: “Here is what was promised. Here is what is possible. Here are our options. What matters most: timeline, completeness, or quality?”</p>
+
+<h2 id="bring-data-to-the-conversation">Bring data to the conversation</h2>
+
+<p>The people who need to be there are the person who made the commitment, engineering leadership with authority to commit resources, product leadership for roadmap tradeoffs, and customer success to manage the relationship. Do not do this in Slack or email. Bring the commitment docs, your technical assessment, the options with tradeoffs, and your recommendation.</p>
+
+<h2 id="negotiate-within-reality">Negotiate within reality</h2>
+
+<p>Things you can negotiate: timeline, feature completeness, resource allocation, scope of MVP. Things you cannot negotiate: technical feasibility, safety or compliance, team health (no 80-hour weeks for months), debt that will cripple you later.</p>
+
+<p>You will likely be under pressure from your leadership, but stick to what is possible: “If we promise something impossible and fail, we lose the customer anyway and we burn out the team. Let me show you what we can deliver.”</p>
+
+<h2 id="fix-the-process-so-it-stops-happening">Fix the process so it stops happening</h2>
+
+<p>Once you navigate the immediate crisis, fix the system:</p>
+
+<ol>
+  <li><strong>Technical review before contracts:</strong> Engineering reviews commitments before they go into contracts, with authority to flag risks.</li>
+  <li><strong>Sales training on boundaries:</strong> Practical training on what the product can and cannot do; when to involve engineering.</li>
+  <li><strong>Standard contract language:</strong> Define “real-time,” include phased delivery schedules and success criteria, and a change-control process.</li>
+  <li><strong>Blameless retrospective:</strong> How did this get sold without technical input? What incentives drove it? Document and propose process changes.</li>
+</ol>
+
+<p>Overselling stops when the incentives and the process change. Until then, lead with facts, options, and a refusal to pretend the impossible is feasible on a whim.</p>
+
+  </div>
+</article>
+
+    </main>
+    <footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-name">Camille Mackinnon</div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:camille@mackinnon.family" aria-label="Email">✉</a>
+      <a href="https://www.linkedin.com/in/camille-mackinnon-61405223/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+  <script data-goatcounter="https://technicallyfeasible.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</footer>
+
+  </body>
+</html>

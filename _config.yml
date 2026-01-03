@@ -1,0 +1,21 @@
+title: "Technically feasible"
+tagline: "Snapshots of engineering, operations, and healthcare data in the real world."
+description: "Hand-drawn and written snapshots on the messy systems beneath tech and healthcare."
+url: "" # Set this to your production URL (e.g., https://example.com)
+baseurl: "" # Leave blank for root deployment on GitHub Pages
+
+permalink: "/:title/"
+
+future: true
+
+plugins:
+  - jekyll-feed
+
+# Optional defaults to keep front matter minimal for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Dr. [Your Last Name]"
